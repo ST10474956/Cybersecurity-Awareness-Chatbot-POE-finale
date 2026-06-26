@@ -1,0 +1,34 @@
+<Window x:Class="MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ Title="Cyber Chatbot" Height="600" Width="900"
+ Background="#1e1e1e">
+ <Grid Margin="10">
+  <Grid.RowDefinitions>
+   <RowDefinition Height="3*"/>
+   <RowDefinition Height="Auto"/>
+   <RowDefinition Height="2*"/>
+  </Grid.RowDefinitions>
+
+  <TextBox Name="ChatBox" Grid.Row="0" Background="#252526" Foreground="White" IsReadOnly="True"/>
+
+  <StackPanel Grid.Row="1" Orientation="Horizontal">
+    <TextBox Name="UserInput" Width="600"/>
+    <Button Content="Send" Click="Send_Click"/>
+    <Button Content="Start Quiz" Click="StartQuiz_Click"/>
+    <Button Content="Show Log" Click="ShowLog_Click"/>
+  </StackPanel>
+
+  <StackPanel Grid.Row="2">
+    <TextBlock Name="QuestionText" Foreground="White"/>
+    <StackPanel Orientation="Horizontal">
+        <Button Content="A" Click="AnswerA"/>
+        <Button Content="B" Click="AnswerB"/>
+        <Button Content="C" Click="AnswerC"/>
+        <Button Content="D" Click="AnswerD"/>
+    </StackPanel>
+    <ProgressBar Name="QuizProgress" Height="20"/>
+    <TextBlock Name="ScoreText" Foreground="White"/>
+  </StackPanel>
+
+ </Grid>
+</Window>
